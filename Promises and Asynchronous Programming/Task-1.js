@@ -3,13 +3,13 @@
 'use strict';
 
 $(document).ready(function () {
-    let $div = $('#myLocation');
+    let $div = $('#googleMap');
     navigator.geolocation.getCurrentPosition(function (position) {
         let myLatLng = {
             lat: position.coords.latitude,
             lng: position.coords.longitude
         };
-        let map = new google.maps.Map(document.getElementById('myLocation'), {
+        let map = new google.maps.Map(document.getElementById('googleMap'), {
             center: myLatLng,
             zoom: 4
         });
